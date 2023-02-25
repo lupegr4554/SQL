@@ -1,0 +1,28 @@
+--Create a grocery store database
+
+CREATE TABLE fruits (id INTEGER PRIMARY KEY,name TEXT,price INTEGER,quantity_sold INTEGER,total_sales INTEGER);
+
+INSERT INTO fruits VALUES(1,"Orange",4,20,80);
+INSERT INTO fruits VALUES(2,"Grape",8,60,480);
+INSERT INTO fruits VALUES(3,"Strawberry",7,100,700);
+INSERT INTO fruits VALUES(4,"Blueberry",9,80,720);
+INSERT INTO fruits VALUES(5,"Rasberry",9,200,1800);
+INSERT INTO fruits VALUES(6,"Red Apple",10,70,700);
+INSERT INTO fruits VALUES(7,"Yellow Apple",10,50,500);
+INSERT INTO fruits VALUES(8,"Green Apple",10,250,2500);
+INSERT INTO fruits VALUES(9,"Pear",11,100,1100);
+INSERT INTO fruits VALUES(10,"Watermelon",8,50,400);
+INSERT INTO fruits VALUES(11,"Canteloup",8,60,480);
+INSERT INTO fruits VALUES(12,"Passion Fruit",14,60,840);
+INSERT INTO fruits VALUES(13,"Pineapple",12,30,420);
+INSERT INTO fruits VALUES(14,"Dragon Fruit",12,25,300);
+INSERT INTO fruits VALUES(15,"Kiwi",9,50,450);
+
+--display the database orderd by price
+SELECT * FROM fruits ORDER BY price asc;
+
+-- what is the sum of all sales from fruits
+SELECT SUM(total_sales) FROM fruits;
+
+--what are the 5 most sold fruits
+SELECT name,price,quantity_sold FROM fruits ORDER BY quantity_sold desc limit 5;
